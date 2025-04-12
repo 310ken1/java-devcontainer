@@ -3,8 +3,7 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
-
+	"image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
@@ -29,19 +28,28 @@
 				"vscjava.vscode-java-pack",
 				"vscjava.vscode-gradle",
 				"vscjava.vscode-java-debug"
-			]
+			],
+			"settings": {
+				// 自動保存
+				"files.autoSave": "afterDelay",
+				// フォーマッタ設定
+				"editor.formatOnSave": true,
+				"eslint.format.enable": true,
+				"[java]": {
+					"editor.defaultFormatter": "redhat.java"
+				},
+				// Markdown Preview Enhanced設定
+				"markdown-preview-enhanced.plantumlJarPath": "/home/vscode/plantuml.jar"
+			}
 		}
-	}
-
+	},
+	"onCreateCommand": "sudo apt -y update && sudo apt install -y graphviz fonts-ipafont && curl -LsSf https://github.com/plantuml/plantuml/releases/download/v1.2025.2/plantuml-1.2025.2.jar -o /home/vscode/plantuml.jar"
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
-
+	//"postCreateCommand": "curl -LsSf https://github.com/plantuml/plantuml/releases/download/v1.2024.7/plantuml-1.2024.7.jar -o /home/vscode/plantuml.jar"
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
