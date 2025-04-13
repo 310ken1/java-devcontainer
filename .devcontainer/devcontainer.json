@@ -14,20 +14,19 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"redhat.java",
+				"vscjava.vscode-gradle",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-java-test",
+				"vscjava.vscode-java-dependency",
 				"usernamehw.errorlens",
 				"streetsidesoftware.code-spell-checker",
 				"hediet.vscode-drawio",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"VisualStudioExptTeam.vscodeintellicode-completions",
-				"shd101wyy.markdown-preview-enhanced",
-				"vscjava.vscode-java-test",
-				"vscjava.vscode-java-dependency",
-				"vscjava.vscode-maven",
-				"redhat.java",
-				"vscjava.vscode-java-pack",
-				"vscjava.vscode-gradle",
-				"vscjava.vscode-java-debug"
+				"shd101wyy.markdown-preview-enhanced"
 			],
 			"settings": {
 				// 自動保存
@@ -43,13 +42,9 @@
 			}
 		}
 	},
-	"onCreateCommand": "sudo apt -y update && sudo apt install -y graphviz fonts-ipafont && curl -LsSf https://github.com/plantuml/plantuml/releases/download/v1.2025.2/plantuml-1.2025.2.jar -o /home/vscode/plantuml.jar"
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	//"postCreateCommand": "curl -LsSf https://github.com/plantuml/plantuml/releases/download/v1.2024.7/plantuml-1.2024.7.jar -o /home/vscode/plantuml.jar"
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"onCreateCommand": "/bin/bash .devcontainer/onCreateCommand.sh",
+	"updateContentCommand": "/bin/bash .devcontainer/updateContentCommand.sh",
+	"postCreateCommand": "/bin/bash .devcontainer/postCreateCommand.sh",
+	"postStartCommand": "/bin/bash .devcontainer/postStartCommand.sh",
+	"postAttachCommand": "/bin/bash .devcontainer/postAttachCommand.sh"
 }
