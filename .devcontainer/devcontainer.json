@@ -1,12 +1,9 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "Java",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+	"name": "Java開発環境",
+	"image": "ubuntu:25.04",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
+			"version": "23",
 			"installMaven": "false",
 			"installGradle": "true"
 		}
@@ -27,24 +24,16 @@
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"VisualStudioExptTeam.vscodeintellicode-completions",
 				"shd101wyy.markdown-preview-enhanced"
-			],
-			"settings": {
-				// 自動保存
-				"files.autoSave": "afterDelay",
-				// フォーマッタ設定
-				"editor.formatOnSave": true,
-				"eslint.format.enable": true,
-				"[java]": {
-					"editor.defaultFormatter": "redhat.java"
-				},
-				// Markdown Preview Enhanced設定
-				"markdown-preview-enhanced.plantumlJarPath": "/home/vscode/plantuml.jar"
-			}
+			]
 		}
 	},
+	// ライフサイクルスクリプト
+	// コンテナ作成時
 	"onCreateCommand": "/bin/bash .devcontainer/onCreateCommand.sh",
 	"updateContentCommand": "/bin/bash .devcontainer/updateContentCommand.sh",
 	"postCreateCommand": "/bin/bash .devcontainer/postCreateCommand.sh",
+	// コンテナ開始時
 	"postStartCommand": "/bin/bash .devcontainer/postStartCommand.sh",
+	// コンテナアタッチ時
 	"postAttachCommand": "/bin/bash .devcontainer/postAttachCommand.sh"
 }
