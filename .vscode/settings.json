@@ -9,5 +9,5 @@
         "editor.defaultFormatter": "redhat.java"
     },
     // Markdown Preview Enhanced設定
-    "markdown-preview-enhanced.plantumlJarPath": "/root/plantuml.jar"
+    "markdown-preview-enhanced.plantumlJarPath": "/usr/local/bin/plantuml.jar"
 }

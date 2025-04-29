@@ -1,13 +1,11 @@
 {
 	"name": "Java開発環境",
-	"image": "ubuntu:25.04",
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "23",
-			"installMaven": "false",
-			"installGradle": "true"
-		}
-	},
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "environment",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=cached"
+	],
+	"workspaceFolder": "/workspace",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -26,14 +24,5 @@
 				"shd101wyy.markdown-preview-enhanced"
 			]
 		}
-	},
-	// ライフサイクルスクリプト
-	// コンテナ作成時
-	"onCreateCommand": "/bin/bash .devcontainer/onCreateCommand.sh",
-	"updateContentCommand": "/bin/bash .devcontainer/updateContentCommand.sh",
-	"postCreateCommand": "/bin/bash .devcontainer/postCreateCommand.sh",
-	// コンテナ開始時
-	"postStartCommand": "/bin/bash .devcontainer/postStartCommand.sh",
-	// コンテナアタッチ時
-	"postAttachCommand": "/bin/bash .devcontainer/postAttachCommand.sh"
+	}
 }
