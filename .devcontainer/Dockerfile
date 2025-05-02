@@ -3,12 +3,13 @@ FROM ubuntu:25.04
 # パッケージインストール
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
-    apt-get update && apt-get install --no-install-recommends -y \
+    apt update && apt install --no-install-recommends -y \
     sudo \
     curl \
     git \
     openjdk-21-jdk-headless \
     gradle \
+    maven \
     graphviz \
     fonts-ipafont
 
