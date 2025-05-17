@@ -4,5 +4,5 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    image: java-devcontainer-image
+    image: ${COMPOSE_ENV_CONTAINER_NAME}-image
     command: ["sleep", "infinity"] # コンテナを起動したままにする
