@@ -11,6 +11,26 @@
     },
     "java.debug.settings.onBuildFailureProceed": true, // ビルド失敗時にデバッグを継続
     "java.compile.nullAnalysis.mode": "automatic", // null安全性チェック(アノテーションに従う)
+    // yaml設定
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.formatOnSave": true
+    },
+    // json設定
+    "prettier.tabWidth": 2,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
+    },
+    // Docker設定
+    "[dockerfile]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+        "editor.formatOnSave": true
+    },
     // Markdown Preview Enhanced設定
     "markdown-preview-enhanced.plantumlJarPath": "/usr/local/bin/plantuml.jar"
 }
