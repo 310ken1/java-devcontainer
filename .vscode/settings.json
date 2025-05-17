@@ -1,13 +1,16 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true,
-    "java.compile.nullAnalysis.mode": "automatic",
-    // 自動保存
-    "files.autoSave": "afterDelay",
-    // フォーマッタ設定
-    "editor.formatOnSave": true,
+    // ファイル設定
+    "files.autoSave": "afterDelay", // 自動保存(任意の時間経過)
+    "files.insertFinalNewline": true, // ファイルの末尾に自動で改行を追加
+    // エディタ設定
+    "editor.tabSize": 2, // インデントを2スペースに統一
+    "editor.formatOnSave": true, // ファイルを保存するたびに自動でコードを整形
+    // Java設定
     "[java]": {
         "editor.defaultFormatter": "redhat.java"
     },
+    "java.debug.settings.onBuildFailureProceed": true, // ビルド失敗時にデバッグを継続
+    "java.compile.nullAnalysis.mode": "automatic", // null安全性チェック(アノテーションに従う)
     // Markdown Preview Enhanced設定
     "markdown-preview-enhanced.plantumlJarPath": "/usr/local/bin/plantuml.jar"
 }
