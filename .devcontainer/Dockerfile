@@ -4,6 +4,7 @@ FROM ubuntu:25.04
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt update && apt install --no-install-recommends -y \
+    locales \
     sudo \
     curl \
     git \
@@ -11,7 +12,12 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     gradle \
     maven \
     graphviz \
-    fonts-ipafont
+    fonts-ipafont \
+    fonts-noto && locale-gen ja_JP.UTF-8 && update-locale LANG=ja_JP.UTF-8
+
+ENV LANG=ja_JP.UTF-8 \
+    LANGUAGE=ja_JP:ja \
+    LC_ALL=ja_JP.UTF-8
 
 # PlantUMLインストール
 ARG plantuml="https://github.com/plantuml/plantuml/releases/download/v1.2025.2/plantuml-1.2025.2.jar"
