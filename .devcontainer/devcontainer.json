@@ -9,22 +9,36 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				// Java
 				"redhat.java",
 				"vscjava.vscode-gradle",
 				"vscjava.vscode-java-pack",
 				"vscjava.vscode-java-debug",
 				"vscjava.vscode-java-test",
 				"vscjava.vscode-java-dependency",
-				"usernamehw.errorlens",
-				"streetsidesoftware.code-spell-checker",
-				"hediet.vscode-drawio",
+				// 開発支援ツール
 				"VisualStudioExptTeam.vscodeintellicode",
-				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"VisualStudioExptTeam.vscodeintellicode-completions",
-				"shd101wyy.markdown-preview-enhanced",
-				"redhat.vscode-yaml",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"esbenp.prettier-vscode",
-				"foxundermoon.shell-format"
+				"streetsidesoftware.code-spell-checker",
+				"redhat.vscode-yaml",
+				"uctakeoff.vscode-counter",
+				"alefragnani.Bookmarks",
+				"usernamehw.errorlens",
+				"PKief.material-icon-theme",
+				// Markdown
+				"shd101wyy.markdown-preview-enhanced",
+				"DavidAnson.vscode-markdownlint",
+				"TakumiI.markdowntable",
+				"mushan.vscode-paste-image",
+				// Docker
+				"ms-azuretools.vscode-docker",
+				"ms-azuretools.vscode-containers",
+				// ドキュメント
+				"hediet.vscode-drawio",
+				// Visual Studio Code
+				"MS-CEINTL.vscode-language-pack-ja"
 			]
 		}
 	}
